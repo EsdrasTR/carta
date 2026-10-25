@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Kary preciosa 💌</title>
+<style>
+  :root { --pink:#f7a8bd; --rose:#e86d91; --deep:#a83f65; --cream:#fff8f4; --paper:#fffdfb; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; overflow-x: hidden;
+    display: grid; place-items: center; padding: 24px 14px;
+    font-family: "Trebuchet MS", Arial, sans-serif; color: #71364d;
+    background: radial-gradient(circle at top, #fff5f7 0, #ffe3eb 45%, #f8c6d5 100%);
+  }
+  .glow { position: fixed; width: 260px; height: 260px; border-radius: 50%; background: #fff; opacity:.28; filter: blur(5px); }
+  .glow.one { top:-100px; left:-70px; } .glow.two { bottom:-120px; right:-70px; }
+  .wrap { width: min(100%, 680px); text-align: center; position: relative; z-index: 1; }
+  .eyebrow { letter-spacing: 3px; text-transform: uppercase; font-size: .75rem; color: #a34b6a; margin-bottom: 12px; }
+  h1 { font-family: Georgia, serif; font-weight: normal; font-size: clamp(2rem, 7vw, 3.3rem); margin: 0 0 10px; color: #9c3f61; }
+  .intro { font-size: 1rem; line-height: 1.6; margin: 0 auto 28px; max-width: 440px; }
+  .envelope-area { height: 240px; display: grid; place-items: center; perspective: 1000px; }
+  .envelope {
+    width: min(320px, 82vw); height: 190px; position: relative; cursor: pointer;
+    border: 0; background: transparent; padding: 0; filter: drop-shadow(0 15px 18px #b34c6a35);
+    transition: transform .3s ease;
+  }
+  .envelope:hover { transform: translateY(-5px); }
+  .envelope:focus-visible { outline: 3px solid #a83f65; outline-offset: 8px; border-radius: 12px; }
+  .back { position:absolute; inset:0; background:#f6a9bf; border-radius: 8px; }
+  .letter-peek {
+    position:absolute; left:8%; width:84%; height:155px; bottom:12px; border-radius:5px;
+    background:var(--paper); transition: transform .8s cubic-bezier(.2,.8,.2,1); z-index:2;
+  }
+  .letter-peek::before { content:"♡"; display:grid; place-items:center; height:100%; font-size:48px; color:#e88ba7; }
+  .front {
+    position:absolute; inset:0; z-index:4; overflow:hidden; border-radius:8px;
+    background: linear-gradient(145deg, #f7b6c8, #ef91ae);
+    clip-path: polygon(0 0, 50% 56%, 100% 0, 100% 100%, 0 100%);
+  }
+  .front::after { content:""; position:absolute; inset:0; background:linear-gradient(35deg,#e982a1aa,transparent 60%); }
+  .flap {
+    position:absolute; z-index:5; top:0; left:0; width:100%; height:60%;
+    background:#fbd0dc; clip-path:polygon(0 0,100% 0,50% 100%);
+    transform-origin:top; transition: transform .7s ease; backface-visibility:hidden;
+  }
+  .seal {
+    position:absolute; z-index:6; top:43%; left:50%; transform:translate(-50%,-50%);
+    width:48px; height:48px; border-radius:50%; display:grid; place-items:center;
+    background:#c34f75; color:white; font-size:24px; box-shadow:0 4px 9px #9b34543a;
+    transition: opacity .25s, transform .3s;
+  }
+  .hint { font-size:.9rem; color:#9c4b67; margin-top:0; animation: pulse 1.8s infinite; }
+  .letter {
+    display:none; text-align:left; background:rgba(255,253,251,.94); border:1px solid #f4c3d1;
+    border-radius:18px; padding:clamp(22px, 5vw, 36px); margin:12px auto 0;
+    box-shadow:0 16px 45px #a83f6517; animation: rise .8s ease both;
+  }
+  .letter h2 { text-align:center; font-family:Georgia,serif; font-weight:normal; color:#a83f65; font-size:1.8rem; margin:0 0 18px; }
+  .letter p { line-height:1.85; font-size:1rem; margin:0 0 14px; }
+  .signature { text-align:center; font-family:Georgia,serif; font-size:clamp(1.35rem,5vw,2rem); color:#b83f6b; margin-top:24px; font-weight:bold; }
+  .tiny-heart { text-align:center; color:#df7193; font-size:1.4rem; margin-top:8px; }
+  .opened .flap { transform:rotateX(180deg); z-index:1; }
+  .opened .seal { opacity:0; transform:translate(-50%,-50%) scale(.5); }
+  .opened .letter-peek { transform:translateY(-45px); }
+  .opened .front { z-index:3; }
+  .opened .envelope { cursor:default; }
+  .opened .hint { display:none; }
+  .opened .letter { display:block; }
+  .opened .envelope-area { height:215px; }
+  .footer { font-size:.8rem; color:#a45a73; margin-top:22px; }
+  .heart { position:fixed; bottom:-30px; color:#df7193; opacity:0; pointer-events:none; animation: floatUp 5s linear forwards; z-index:0; }
+  @keyframes rise { from {opacity:0; transform:translateY(18px)} to {opacity:1; transform:translateY(0)} }
+  @keyframes pulse { 0%,100%{opacity:.65} 50%{opacity:1} }
+  @keyframes floatUp { 0%{transform:translateY(0) rotate(0);opacity:0} 12%{opacity:.8} 100%{transform:translateY(-110vh) rotate(35deg);opacity:0} }
+  @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
+</style>
+</head>
+<body>
+<div class="glow one"></div><div class="glow two"></div>
+<main class="wrap" id="page">
+  <div class="eyebrow">Un pequeño detalle para usted</div>
+  <h1>Un mes de nosotros 💗</h1>
+  <p class="intro">Hay palabras que quería regalarle…<br>Toque el sobre para abrir su cartita.</p>
+
+  <div class="envelope-area">
+    <button class="envelope" id="envelope" aria-label="Abrir la carta para Kary">
+      <span class="back"></span>
+      <span class="letter-peek"></span>
+      <span class="flap"></span>
+      <span class="front"></span>
+      <span class="seal">♡</span>
+    </button>
+  </div>
+  <p class="hint" id="hint">Presione aquí para abrir 💌</p>
+
+  <article class="letter" id="letter" aria-live="polite">
+    <h2>Para mi Kary preciosa 🌷</h2>
+    <p>Mi amor, hoy cumplimos nuestro primer mes como novios y quería tomarme un momento para agradecerle por llegar a mi vida y permitirme compartir esta etapa tan bonita con usted.</p>
+    <p>Gracias por cada conversación, por sus detalles, por su cariño y por esos pequeños momentos que, aunque parezcan sencillos, hacen que mis días sean especiales. Me alegra poder conocerla más, aprender de usted y construir recuerdos juntos.</p>
+    <p>Sé que apenas estamos comenzando este camino, pero deseo que sigamos cuidando lo nuestro con paciencia, respeto, confianza y mucho amor. No se trata de que todo sea perfecto, sino de que podamos apoyarnos, escucharnos y elegirnos también en los días difíciles.</p>
+    <p>Gracias por este primer mes, por ser usted y por dejarme ser parte de su vida. Espero que nos queden muchos momentos bonitos por compartir y motivos para sonreír juntos. ❤️</p>
+    <div class="signature">La amo Kary preciosa</div>
+    <div class="tiny-heart">♡ ♡ ♡</div>
+  </article>
+  <div class="footer">Hecho con mucho cariño, para usted. ✨</div>
+</main>
+<script>
+  const page = document.getElementById('page');
+  const envelope = document.getElementById('envelope');
+  let opened = false;
+  envelope.addEventListener('click', () => {
+    if (opened) return;
+    opened = true;
+    page.classList.add('opened');
+    document.getElementById('hint').textContent = '';
+    for (let i = 0; i < 16; i++) {
+      setTimeout(() => {
+        const heart = document.createElement('span');
+        heart.className = 'heart';
+        heart.textContent = ['♡', '♥', '💕', '✦'][Math.floor(Math.random() * 4)];
+        heart.style.left = (Math.random() * 100) + 'vw';
+        heart.style.fontSize = (14 + Math.random() * 20) + 'px';
+        heart.style.animationDuration = (4 + Math.random() * 3) + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 7500);
+      }, i * 130);
+    }
+    setTimeout(() => document.getElementById('letter').scrollIntoView({behavior:'smooth', block:'start'}), 450);
+  });
+</script>
+</body>
+</html>
